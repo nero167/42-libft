@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:12:48 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/08 15:40:49 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/08 18:10:15 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/08 19:01:08 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <string.h>
 
-	i = 0;
-	while (str[i] != '\0')
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	// Konvertiere die Zeiger in Zeiger auf Bytes
+	unsigned char	*d;
+	const unsigned char	*s;
+
+	d = dst;
+	s = src;
+	while (n --)
 	{
-		i++;
-		return (i);
+		*d = s;
+		*dst++;
+		*src++;
 	}
+	return (dst);
 }
+
+/* Die Funktion memcpy in C dient dazu, Daten von einem Speicherbereich in einen anderen zu kopieren.*/

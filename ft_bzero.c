@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 18:12:48 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/08 15:40:49 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/08 17:50:57 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/08 18:09:38 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include <string.h>
 
-	i = 0;
-	while (str[i] != '\0')
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*p;
+
+	p = s;
+	while (n)
 	{
-		i++;
-		return (i);
+		*p++ = 0; /* *p dereferenziert den Zeiger p; =0 das Byte auf das p zeigt, wird auf 0 gesetzt;  */
+		--n;
 	}
 }
+
+/*Die Funktion bzero in C wird verwendet, 
+um einen Speicherbereich mit Nullen zu füllen.*/

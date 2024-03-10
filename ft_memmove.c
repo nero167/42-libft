@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 18:10:15 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/10 15:03:40 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/10 15:14:08 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/10 15:42:45 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*d;
-	const unsigned char	*s;
+	char	*d;
+	char	*s;
 
-	d = dst;
-	s = src;
-	while (n --)
+	d = (char *)dst; // type casting = Datentyp eines Zeigers zu ändern
+	s = (char *)src;
+	if (s < d)
 	{
-		*d = s;
-		*dst++;
-		*src++;
+		while (len--)
+		{
+			*(d + len) = *(s + len);
+		}
+		return (dst);
+	}
+	while (len--)
+	{
+		*d++ = *s++;
 	}
 	return (dst);
 }
-
-/* Die Funktion memcpy in C dient dazu, Daten von einem Speicherbereich in einen anderen zu kopieren.*/

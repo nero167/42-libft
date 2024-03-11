@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 17:50:57 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/11 11:59:01 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/11 13:48:18 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/11 14:18:04 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*p;
-	int				i;
+	int	i;
 
-	i = 0;
-	p = s;
-	while (n--)
+	i = ft_strlen(s);
+	while (s[i--])
 	{
-		p[i] = 0;
-		*(p + i) = 0; // andere Art um auf den Value zuzugreifen mit pointer
-		i++;
+		if (s[i] == c)
+		{
+			return (s + i);
+		}
 	}
+	return (0);
 }
-
-/*Die Funktion bzero in C wird verwendet, 
-um einen Speicherbereich mit Nullen zu füllen.*/

@@ -6,11 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:12:48 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/08 15:40:49 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/11 14:18:27 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

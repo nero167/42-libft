@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 09:56:34 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/15 10:30:50 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/15 11:19:05 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/15 11:19:42 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int ch)
-{
-	if ((ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
+#include <unistd.h>
 
+void
+	*ft_calloc(size_t count, size_t size)
+{
+	void	*ptr;
+
+	ptr = (void *)malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count);
+	return (ptr);
+}

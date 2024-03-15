@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 09:56:34 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/15 10:30:50 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/14 19:12:59 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/14 19:31:24 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int ch)
-{
-	if ((ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
+#include <unistd.h>
 
+char	*strnstr(const char *haystack, const char *needle, size_t len)
+{
+	char	*h;
+	char	*n;
+	int		i;
+
+	h = haystack;
+	n = needle;
+	i = 0;
+	while (len)
+	{
+		if (n[i] == h[i])
+		{
+			return (n + i);
+		}
+		else
+		{
+			return (NULL);
+		}
+	}
+}

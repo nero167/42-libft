@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 11:50:56 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/17 14:16:14 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/17 14:51:34 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/17 15:34:07 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*newstr;
-	size_t	i;
-	size_t	j;
+	char	result;
+	int		len1;
+	int		len2;
 
-	if (!s || !(newstr = (char *)malloc(len + 1)))
-		return (0);
-	i = start;
-	j = 0;
-	while (i < ft_strlen(s) && j < len)
-		newstr[j++] = s[i++];
-	newstr[j] = '\0';
-	return (newstr);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	if (s1 == 0 || s2 == 0)
+	{
+		return (NULL);
+	}
+	char	*result = (char*)malloc(len1 + len2 + 1);
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+	strcpy(result, s1);
+	strcat(result, s2);
+	return (result);
 }

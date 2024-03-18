@@ -6,13 +6,13 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:47:17 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/10 17:04:13 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:43:53 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;

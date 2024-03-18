@@ -6,9 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:48:18 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/11 14:18:04 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 19:53:47 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

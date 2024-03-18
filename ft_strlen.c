@@ -6,9 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 18:12:48 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/11 14:18:27 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:31:45 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {
@@ -18,6 +20,6 @@ int	ft_strlen(const char *str)
 	while (str[i] != '\0')
 	{
 		i++;
-		return (i);
 	}
+	return (i);
 }

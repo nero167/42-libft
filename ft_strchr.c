@@ -6,19 +6,27 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 10:31:37 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/11 13:47:15 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:35:55 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*strchr(const char *s, int c)
 {
-	int	i;
+	const char	*str;
+	char		uc;
 
-	i = 0;
-	while (s[i])
+	str = s;
+	uc = (char)c;
+	while (*str)
 	{
-		if (s[i] == c)
-			return (s + i); // gibt mir hier die adresse zuruck
-		i++;
+		if (*(str) == uc)
+		{
+			return ((char *)str);
+		}
 	}
+	if (*str == uc)
+		return ((char *)str);
+	return (NULL);
 }

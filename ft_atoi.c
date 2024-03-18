@@ -6,11 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 19:36:30 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/15 11:17:29 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:43:23 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

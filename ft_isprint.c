@@ -6,9 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:53:37 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/06 18:11:31 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:43:36 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int ch)
 {

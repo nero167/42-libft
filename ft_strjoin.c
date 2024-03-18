@@ -6,15 +6,15 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 14:51:34 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/17 15:34:07 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:33:01 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	result;
+	char	*result;
 	int		len1;
 	int		len2;
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		return (NULL);
 	}
-	char	*result = (char*)malloc(len1 + len2 + 1);
+	result = (char *)malloc(len1 + len2 + 1);
 	if (result == NULL)
 	{
 		return (NULL);

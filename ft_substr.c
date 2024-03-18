@@ -6,11 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:50:56 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/17 14:16:14 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:44:05 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

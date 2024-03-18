@@ -6,9 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 11:16:38 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/05 11:41:39 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:43:34 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int ch)
 {

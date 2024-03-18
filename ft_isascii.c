@@ -6,9 +6,11 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 17:45:14 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/06 18:31:26 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:43:32 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int ch)
 {

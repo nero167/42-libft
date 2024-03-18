@@ -6,18 +6,18 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:14:08 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/10 15:42:45 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:19:10 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*d;
 	char	*s;
 
-	d = (char *)dst; // type casting = Datentyp eines Zeigers zu ändern
+	d = (char *)dst;
 	s = (char *)src;
 	if (s < d)
 	{

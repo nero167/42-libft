@@ -6,7 +6,7 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:48:18 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/19 15:51:40 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/20 08:05:39 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int			i;
+	const char	*string;
 
+	string = s;
 	i = ft_strlen(s);
-	while (s[i--])
+	s = (s + i);
+	while (*s != *string && c != *s)
 	{
-		if (s[i] == c)
-		{
-			return ((char *)s);
-		}
+		s--;
+	}
+	if (c == *s)
+	{
+		return ((char *)s);
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 15:55:03 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/20 08:10:45 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/27 19:00:25 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t		sizeofsrc;
 	size_t		i;
 
-	if (!dst || !src)
-		return (0);
 	sizeofsrc = ft_strlen(src);
 	i = 0;
 	if (dstsize != 0)

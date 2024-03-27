@@ -6,7 +6,7 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 15:34:33 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/19 15:53:02 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/27 20:36:01 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (len > start && ft_strrchr(set, s1[len - 1]))
 		len--;
 	trim_string = malloc(sizeof(char) * (len - start + 1));
-	if (&ft_strtrim == NULL)
+	if (trim_string == NULL)
 		return (NULL);
 	j = 0;
 	while (start < len)

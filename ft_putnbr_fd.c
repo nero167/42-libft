@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 11:50:56 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/27 19:46:15 by namirtha         ###   ########.fr       */
+/*   Created: 2024/03/27 17:26:23 by namirtha          #+#    #+#             */
+/*   Updated: 2024/03/27 17:27:25 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*newstr;
-	int		i;
-
-	if (!s)
+	if (n == -2147483648)
 	{
-		return (0);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putstr_fd("8", fd);
 	}
-	if (ft_strlen(s) < start)
+	else if (n < 0)
 	{
-		len = 0;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
 	}
-	if ((ft_strlen(s) - start) < len)
+	else
 	{
-		len = ft_strlen(s) - start;
+		if (n > 9)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
 	}
-	newstr = malloc(sizeof(char) * (len + 1));
-	if (!newstr)
-		return (NULL);
-	i = 0;
-	while (len --)
-	{
-		newstr[i++] = s[start++];
-	}
-	newstr[i] = '\0';
-	return (newstr);
 }

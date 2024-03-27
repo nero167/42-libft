@@ -6,7 +6,7 @@
 /*   By: namirtha <namirtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 14:51:34 by namirtha          #+#    #+#             */
-/*   Updated: 2024/03/18 13:33:01 by namirtha         ###   ########.fr       */
+/*   Updated: 2024/03/27 21:08:29 by namirtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*result;
-	int		len1;
-	int		len2;
+	size_t	len;
+	char	*str;
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	if (s1 == 0 || s2 == 0)
+	if (!s1 && !s2)
 	{
 		return (NULL);
 	}
-	result = (char *)malloc(len1 + len2 + 1);
-	if (result == NULL)
-	{
+	if (s1)
+		len = ft_strlen(s1);
+	else
+		len = 0;
+	if (s2)
+		len += ft_strlen(s2);
+	str = malloc(len + 1);
+	if (!str)
 		return (NULL);
-	}
-	strcpy(result, s1);
-	strcat(result, s2);
-	return (result);
+	if (s1)
+		ft_strlcpy(str, s1, len + 1);
+	if (s2)
+		ft_strlcpy(str + ft_strlen(s1), s2, len - ft_strlen(s1) + 1);
+	return (str);
 }
